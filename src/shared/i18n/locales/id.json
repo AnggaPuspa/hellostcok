@@ -1,0 +1,277 @@
+{
+  "common": {
+    "brand": "Hello Stock",
+    "home": "Beranda",
+    "login": "Masuk",
+    "register": "Coba gratis",
+    "guide": "Panduan",
+    "contact": "Kontak",
+    "status": "Status",
+    "security": "Keamanan",
+    "legal": "Syarat & privasi",
+    "demo": "Demo",
+    "language": "Bahasa",
+    "langId": "Indonesia",
+    "langEn": "English"
+  },
+  "landing": {
+    "nav": {
+      "modules": "Modul",
+      "pricing": "Harga",
+      "guide": "Panduan",
+      "contact": "Kontak",
+      "menu": "Menu"
+    },
+    "hero": {
+      "title": "Stok toko cocok setiap hari",
+      "body": "Catat penerimaan, penjualan, barang rusak, dan opname dalam satu tempat. Admin, petugas, dan pemilik pakai peran masing-masing — tanpa spreadsheet yang saling beda.",
+      "cta": "Coba gratis",
+      "imageAlt": "Dashboard Hello Stock di ruang stok"
+    },
+    "stock": {
+      "title": "Penerimaan & penjualan",
+      "body": "Setiap barang masuk dan keluar punya kode transaksi. Stok berubah otomatis, jejaknya tetap jelas saat audit atau closing.",
+      "cta": "Mulai mencatat stok",
+      "imageAlt": "Penerimaan barang di gudang"
+    },
+    "team": {
+      "title": "Kerja bersama",
+      "body": "Petugas mencatat operasional, admin mengatur akses, pemilik membaca laporan. Satu data stok, tiga peran yang jelas.",
+      "cta": "Lihat cara kerjanya",
+      "imageAlt": "Kerja bersama di Hello Stock"
+    },
+    "damage": {
+      "title": "Barang rusak & QC",
+      "body": "Laporkan kerusakan lengkap dengan foto. Pilih disposisi tahan, retur, atau musnah — semua tersimpan supaya tidak hilang di catatan manual.",
+      "cta": "Coba di aplikasi",
+      "imageAlt": "Inspeksi kualitas barang rusak"
+    },
+    "opname": {
+      "title": "Opname & koreksi",
+      "body": "Cocokkan hitungan fisik dengan sistem. Selisih tercatat beserta alasan — closing bulanan tidak lagi tebak-tebakan.",
+      "cta": "Mulai opname",
+      "imageAlt": "Review opname dan koreksi stok"
+    },
+    "pricing": {
+      "title": "Paket sesuai skala toko",
+      "body": "Mulai gratis untuk toko kecil, naik ke Toko atau Bisnis saat tim dan lokasi bertambah. Bayar bulanan, batalkan kapan saja.",
+      "period": "/bln",
+      "plans": {
+        "free": {
+          "name": "Gratis",
+          "blurb": "Untuk toko kecil yang baru merapikan stok.",
+          "cta": "Mulai gratis",
+          "features": [
+            "1 akun pengguna",
+            "Hingga 50 produk",
+            "Penerimaan & penjualan",
+            "Barang rusak & foto QC",
+            "Dashboard dasar",
+            "Dukungan komunitas"
+          ]
+        },
+        "shop": {
+          "name": "Toko",
+          "blurb": "Untuk operasional harian admin dan petugas.",
+          "cta": "Pilih paket Toko",
+          "features": [
+            "Hingga 5 akun (admin & petugas)",
+            "Produk tanpa batas",
+            "Opname stok lengkap",
+            "Laporan + ekspor CSV",
+            "Foto QC dengan retensi",
+            "Dukungan chat prioritas"
+          ]
+        },
+        "business": {
+          "name": "Bisnis",
+          "blurb": "Untuk multi-lokasi dan tim yang lebih besar.",
+          "cta": "Pilih paket Bisnis",
+          "features": [
+            "Akun & peran tanpa batas",
+            "Multi-lokasi / multi-gudang",
+            "Laporan agregat lanjutan",
+            "Akses pemilik baca saja",
+            "Audit trail lengkap",
+            "Onboarding & dukungan dedicated"
+          ]
+        }
+      }
+    },
+    "cta": {
+      "title": "Buka stok dari mana saja",
+      "body": "Pakai browser di toko atau kantor. Daftar akun baru, atau coba dulu dengan demo admin, petugas, dan pemilik.",
+      "button": "Coba gratis"
+    },
+    "data": {
+      "title": "Laporan yang bisa dipakai",
+      "body": "Lihat ringkasan opening–closing per SKU, unduh CSV, dan pantau retensi foto QC. Data inventaris toko tetap di tangan Anda.",
+      "cta": "Lihat laporan",
+      "imageAlt": "Alur inventaris Hello Stock"
+    },
+    "sponsors": {
+      "title": "Dipakai bersama mitra lapangan",
+      "label": "Mitra kolaborasi Hello Stock"
+    },
+    "apps": {
+      "title": "Semua modul inventaris, satu Hello Stock",
+      "body": "Produk, penerimaan, penjualan, barang rusak, opname, dan laporan — alur harian toko tanpa pindah aplikasi.",
+      "cta": "Jelajahi modul",
+      "imageAlt": "Modul inventaris Hello Stock"
+    },
+    "testimonials": {
+      "title": "Dipakai di lapangan",
+      "items": {
+        "prabowo": {
+          "role": "Program MBG · Badan Gizi Nasional",
+          "quote": "Penerimaan bahan, pengeluaran, dan laporan distribusi MBG jadi satu alur. Tim lapangan tidak lagi cocokkan angka di akhir hari."
+        },
+        "gibran": {
+          "role": "Kopdes Merah Putih",
+          "quote": "Admin dan petugas koperasi desa kerja di sistem yang sama. Opname lebih cepat, selisih stok ketahuan lebih awal."
+        },
+        "bahlil": {
+          "role": "Pertamina",
+          "quote": "Inventaris operasional terlacak per transaksi. Ringkasan dan laporan siap dibaca tanpa menunggu rekap manual."
+        }
+      }
+    },
+    "footer": {
+      "brand": "Hello Stock membantu toko mencatat stok harian: transaksi terlacak, peran terpisah, laporan siap dibaca.",
+      "product": "Produk",
+      "modules": "Modul",
+      "pricing": "Harga",
+      "reports": "Laporan",
+      "resources": "Sumber daya",
+      "guide": "Panduan",
+      "damage": "Barang rusak",
+      "status": "Status",
+      "company": "Perusahaan",
+      "demo": "Demo",
+      "contact": "Kontak",
+      "security": "Keamanan",
+      "tryTitle": "Coba hari ini",
+      "tryBody": "Mulai gratis, atau masuk dengan demo admin, petugas, atau pemilik.",
+      "tryCta": "Mulai sekarang",
+      "legal": "Syarat & privasi",
+      "copyright": "© {{year}} Hello Stock"
+    }
+  },
+  "guide": {
+    "kicker": "Bantuan",
+    "title": "Panduan Hello Stock",
+    "lead": "Langkah praktis memakai modul inventaris: produk, penerimaan, penjualan, barang rusak, opname, dan laporan.",
+    "toc": "Daftar isi",
+    "sections": {
+      "mulai": {
+        "title": "Mulai cepat",
+        "steps": [
+          "Daftar akun baru, atau masuk dengan akun demo (admin, petugas, atau pemilik).",
+          "Dari Dashboard, lihat ringkasan stok dan aktivitas terbaru.",
+          "Lanjut isi produk, lalu catat penerimaan dan penjualan harian."
+        ]
+      },
+      "peran": {
+        "title": "Peran di Hello Stock",
+        "steps": [
+          "Admin: kelola pengguna dan seluruh modul.",
+          "Petugas: isi penerimaan, penjualan, barang rusak, dan opname.",
+          "Pemilik: pantau laporan dan kondisi stok (baca saja)."
+        ]
+      },
+      "stok": {
+        "title": "Produk & arus stok",
+        "steps": [
+          "Tambah produk di menu Produk (nama, SKU, satuan, stok awal).",
+          "Catat barang masuk di Penerimaan.",
+          "Catat barang keluar di Penjualan — stok berubah otomatis."
+        ]
+      },
+      "qc": {
+        "title": "Barang rusak & opname",
+        "steps": [
+          "Laporkan barang rusak dan unggah foto QC bila perlu.",
+          "Tentukan disposisi di halaman detail.",
+          "Jalankan Opname saat hitung fisik agar data cocok dengan gudang."
+        ]
+      },
+      "laporan": {
+        "title": "Laporan",
+        "steps": [
+          "Buka Laporan untuk ringkasan per SKU.",
+          "Masuk ke detail SKU untuk melihat gerakan stok.",
+          "Unduh CSV jika perlu dibawa ke luar aplikasi."
+        ]
+      }
+    },
+    "loginCta": "Masuk ke aplikasi",
+    "registerCta": "Buat akun gratis"
+  },
+  "status": {
+    "title": "Status",
+    "summary": "Semua sistem beroperasi · diperbarui {{time}}",
+    "ok": "Beroperasi",
+    "services": {
+      "web": "Aplikasi web",
+      "api": "API & autentikasi",
+      "inventory": "Inventaris",
+      "qc": "Barang rusak & QC",
+      "reports": "Laporan"
+    }
+  },
+  "contact": {
+    "kicker": "Perusahaan",
+    "title": "Kontak",
+    "lead": "Ada pertanyaan soal paket, demo, atau cara pakai Hello Stock? Kirim pesan singkat — kami baca setiap pertanyaan.",
+    "name": "Nama",
+    "email": "Email",
+    "message": "Pesan",
+    "submit": "Kirim pesan",
+    "note": "Atau langsung coba akun demo di halaman masuk.",
+    "sent": "Pesan tercatat. Untuk sekarang ini demo lokal, jadi belum ada pengiriman email sungguhan.",
+    "loginCta": "Masuk ke aplikasi",
+    "guideCta": "Baca panduan"
+  },
+  "legal": {
+    "kicker": "Legal",
+    "title": "Syarat & privasi",
+    "lead": "Ringkasan cara Hello Stock memakai data akun dan inventaris toko Anda. Versi singkat untuk produk demo ini.",
+    "termsTitle": "Syarat penggunaan",
+    "terms": [
+      "Anda bertanggung jawab atas akun dan data yang dimasukkan ke sistem.",
+      "Akun demo hanya untuk uji coba fitur, bukan untuk data produksi sensitif.",
+      "Fitur dan paket dapat berubah seiring pengembangan produk."
+    ],
+    "privacyTitle": "Privasi",
+    "privacy": [
+      "Data login dan inventaris dipakai untuk menjalankan aplikasi (sesi, stok, laporan).",
+      "Foto QC disimpan sesuai retensi yang diatur di sistem.",
+      "Kami tidak menjual data toko Anda ke pihak ketiga untuk iklan."
+    ],
+    "contactTitle": "Kontak",
+    "contactBody": "Untuk pertanyaan soal data atau akun, buka halaman Kontak.",
+    "securityCta": "Lihat keamanan",
+    "homeCta": "Kembali ke beranda"
+  },
+  "security": {
+    "kicker": "Keamanan",
+    "title": "Keamanan Hello Stock",
+    "lead": "Akses dibatasi per peran, jejak transaksi bisa dilacak, dan data inventaris tetap di kendali toko Anda.",
+    "accessTitle": "Kontrol akses",
+    "access": [
+      "Admin mengelola pengguna dan seluruh modul.",
+      "Petugas mengisi operasional harian sesuai izin.",
+      "Pemilik membaca ringkasan dan laporan tanpa mengubah data operasional."
+    ],
+    "trailTitle": "Jejak operasional",
+    "trail": [
+      "Penerimaan dan penjualan punya kode transaksi.",
+      "Koreksi opname dan disposisi barang rusak tersimpan dengan alasan.",
+      "Laporan bisa diekspor CSV untuk audit internal."
+    ],
+    "statusTitle": "Status layanan",
+    "statusBody": "Pantau ketersediaan sistem di halaman Status.",
+    "statusCta": "Cek status",
+    "legalCta": "Syarat & privasi"
+  }
+}

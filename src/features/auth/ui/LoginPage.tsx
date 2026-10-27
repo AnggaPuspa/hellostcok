@@ -1,37 +1,56 @@
-import { useState, type FormEvent } from 'react'
-import { Link, Navigate, useNavigate } from 'react-router'
+import { useEffect, useState, type FormEvent } from 'react'
+import { Navigate, useNavigate } from 'react-router'
 import arrow from '@/assets/auth/arrow-right.svg'
 import { Button } from '@/shared/ui/atoms/Button.tsx'
 import { Checkbox } from '@/shared/ui/atoms/Checkbox.tsx'
 import { Heading } from '@/shared/ui/atoms/Heading.tsx'
+import { Text } from '@/shared/ui/atoms/Text.tsx'
+import { TextLink } from '@/shared/ui/atoms/TextLink.tsx'
 import { TextField } from '@/shared/ui/atoms/TextField.tsx'
-import { getSession, login } from '../model/session.ts'
+import { Alert } from '@/shared/ui/molecules/Alert.tsx'
+import { useToast } from '@/shared/ui/toast/ToastProvider.tsx'
+import { getDemos, getSession, login, loginAs, rememberedEmail, rememberEmail, type DemoAccount } from '../model/session.ts'
 import { AuthLayout } from './AuthLayout.tsx'
 import { Logo } from './Logo.tsx'
 import { PasswordField } from './PasswordField.tsx'
 
-const demos = {
-  admin: { email: 'admin@hellostock.test', password: 'admin' },
-  pemilik: { email: 'pemilik@hellostock.test', password: 'pemilik' },
-}
-
 export function LoginPage() {
   const navigate = useNavigate()
-  const [email, setEmail] = useState(() => localStorage.getItem('hello-stock-remember') ?? '')
+  const toast = useToast()
+  const [email, setEmail] = useState(rememberedEmail)
   const [password, setPassword] = useState('')
   const [remember, setRemember] = useState(false)
   const [error, setError] = useState(false)
+  const [demos, setDemos] = useState<DemoAccount[]>([])
 
-  if (getSession()) return <Navigate to="/" replace />
+  useEffect(() => {
+    let active = true
+    getDemos()
+      .then((list) => {
+        if (active) setDemos(list)
+      })
+      .catch(() => {
+        if (!active) return
+        setDemos([])
+        toast.error('Daftar akun demo gagal dimuat.', 'Periksa fake server, lalu muat ulang halaman.')
+      })
+    return () => {
+      active = false
+    }
+  }, [])
 
-  function submit(nextEmail: string, nextPassword: string) {
-    const session = login(nextEmail, nextPassword)
+  if (getSession()) return <Navigate to="/dashboard" replace />
+
+  async function submit(nextEmail: string, nextPassword: string) {
+    const session = await login(nextEmail, nextPassword)
     if (!session) {
       setError(true)
+      toast.error('Email atau kata sandi tidak cocok.', 'Coba lagi atau hubungi admin toko.')
       return
     }
-    if (remember) localStorage.setItem('hello-stock-remember', nextEmail)
-    navigate('/')
+    if (remember) rememberEmail(nextEmail)
+    toast.success('Berhasil masuk.', session.name)
+    navigate('/dashboard')
   }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -39,12 +58,16 @@ export function LoginPage() {
     submit(email, password)
   }
 
-  function enterAs(role: keyof typeof demos) {
-    const account = demos[role]
-    setEmail(account.email)
-    setPassword(account.password)
+  async function enterAs(account: DemoAccount) {
     setError(false)
-    submit(account.email, account.password)
+    const session = await loginAs(account.role)
+    if (!session) {
+      setError(true)
+      toast.error('Masuk sebagai akun itu gagal.', 'Akun nonaktif atau server tidak menjawab.')
+      return
+    }
+    toast.success('Berhasil masuk.', session.name)
+    navigate('/dashboard')
   }
 
   return (
@@ -53,16 +76,11 @@ export function LoginPage() {
         <Logo />
         <div className="auth-intro">
           <Heading>Masuk ke akun Anda</Heading>
-          <p>Selamat datang kembali! Isi detail akun Anda untuk masuk.</p>
+          <Text>Selamat datang kembali! Isi detail akun Anda untuk masuk.</Text>
         </div>
       </div>
       <form className="auth-form" onSubmit={handleSubmit}>
-        {error ? (
-          <div className="auth-error" role="alert">
-            <strong>Email atau kata sandi tidak cocok.</strong>
-            <span>Coba lagi atau hubungi admin toko.</span>
-          </div>
-        ) : null}
+        {error ? <Alert title="Email atau kata sandi tidak cocok.">Coba lagi atau hubungi admin toko.</Alert> : null}
         <TextField
           size="lg"
           label="Email"
@@ -82,16 +100,19 @@ export function LoginPage() {
         </Button>
       </form>
       <div className="auth-demos">
-        <p>Masuk Sebagai</p>
+        <Text>Masuk Sebagai</Text>
         <div>
-          <Button variant="soft" onClick={() => enterAs('admin')}>Admin</Button>
-          <Button variant="soft" onClick={() => enterAs('pemilik')}>Pemilik</Button>
+          {demos.map((account) => (
+            <Button key={account.role} variant="soft" onClick={() => void enterAs(account)}>
+              {account.name}
+            </Button>
+          ))}
         </div>
       </div>
-      <p className="auth-helper">Hubungi admin toko jika tidak memiliki akses.</p>
-      <p className="auth-switch">
-        Belum punya akun? <Link to="/register">Daftar</Link>
-      </p>
+      <Text className="auth-helper">Hubungi admin toko jika tidak memiliki akses.</Text>
+      <Text className="auth-switch">
+        Belum punya akun? <TextLink to="/register">Daftar</TextLink>
+      </Text>
     </AuthLayout>
   )
 }

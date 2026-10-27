@@ -1,9 +1,13 @@
 import { useState, type FormEvent } from 'react'
-import { Link, Navigate, useNavigate } from 'react-router'
+import { Navigate, useNavigate } from 'react-router'
 import arrow from '@/assets/auth/arrow-right.svg'
 import { Button } from '@/shared/ui/atoms/Button.tsx'
 import { Heading } from '@/shared/ui/atoms/Heading.tsx'
+import { Text } from '@/shared/ui/atoms/Text.tsx'
+import { TextLink } from '@/shared/ui/atoms/TextLink.tsx'
 import { TextField } from '@/shared/ui/atoms/TextField.tsx'
+import { Alert } from '@/shared/ui/molecules/Alert.tsx'
+import { useToast } from '@/shared/ui/toast/ToastProvider.tsx'
 import { getSession, register } from '../model/session.ts'
 import { AuthLayout } from './AuthLayout.tsx'
 import { Logo } from './Logo.tsx'
@@ -11,26 +15,30 @@ import { PasswordField } from './PasswordField.tsx'
 
 export function RegisterPage() {
   const navigate = useNavigate()
+  const toast = useToast()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirm, setConfirm] = useState('')
   const [error, setError] = useState<string | null>(null)
 
-  if (getSession()) return <Navigate to="/" replace />
+  if (getSession()) return <Navigate to="/dashboard" replace />
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     if (password !== confirm) {
       setError('Kata sandi tidak sama.')
+      toast.error('Kata sandi tidak sama.', 'Isi konfirmasi dengan kata sandi yang sama.')
       return
     }
-    const message = register({ name, email, password })
+    const message = await register({ name, email, password })
     if (message) {
       setError(message)
+      toast.error('Daftar gagal.', message)
       return
     }
-    navigate('/')
+    toast.success('Akun berhasil dibuat.', name)
+    navigate('/dashboard')
   }
 
   return (
@@ -39,15 +47,11 @@ export function RegisterPage() {
         <Logo />
         <div className="auth-intro">
           <Heading>Daftar akun</Heading>
-          <p>Buat akun petugas untuk mulai mencatat stok.</p>
+          <Text>Buat akun petugas untuk mulai mencatat stok.</Text>
         </div>
       </div>
       <form className="auth-form" onSubmit={handleSubmit}>
-        {error ? (
-          <div className="auth-error" role="alert">
-            <strong>{error}</strong>
-          </div>
-        ) : null}
+        {error ? <Alert title={error} /> : null}
         <TextField
           size="lg"
           label="Nama"
@@ -75,9 +79,9 @@ export function RegisterPage() {
           <img src={arrow} alt="" width="21.5238" height="21.5238" />
         </Button>
       </form>
-      <p className="auth-switch">
-        Sudah punya akun? <Link to="/login">Masuk</Link>
-      </p>
+      <Text className="auth-switch">
+        Sudah punya akun? <TextLink to="/login">Masuk</TextLink>
+      </Text>
     </AuthLayout>
   )
 }

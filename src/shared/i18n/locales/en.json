@@ -1,0 +1,277 @@
+{
+  "common": {
+    "brand": "Hello Stock",
+    "home": "Home",
+    "login": "Sign in",
+    "register": "Try free",
+    "guide": "Guide",
+    "contact": "Contact",
+    "status": "Status",
+    "security": "Security",
+    "legal": "Terms & privacy",
+    "demo": "Demo",
+    "language": "Language",
+    "langId": "Indonesia",
+    "langEn": "English"
+  },
+  "landing": {
+    "nav": {
+      "modules": "Modules",
+      "pricing": "Pricing",
+      "guide": "Guide",
+      "contact": "Contact",
+      "menu": "Menu"
+    },
+    "hero": {
+      "title": "Keep store stock accurate every day",
+      "body": "Record receiving, sales, damaged goods, and stocktakes in one place. Admins, staff, and owners each get the right role — no mismatched spreadsheets.",
+      "cta": "Try free",
+      "imageAlt": "Hello Stock dashboard in a stockroom"
+    },
+    "stock": {
+      "title": "Receiving & sales",
+      "body": "Every inbound and outbound move gets a transaction code. Stock updates automatically, with a clear trail for audits and closing.",
+      "cta": "Start tracking stock",
+      "imageAlt": "Warehouse receiving with cartons"
+    },
+    "team": {
+      "title": "Work together",
+      "body": "Staff record operations, admins manage access, owners read reports. One stock dataset, three clear roles.",
+      "cta": "See how it works",
+      "imageAlt": "Team collaboration in Hello Stock"
+    },
+    "damage": {
+      "title": "Damaged goods & QC",
+      "body": "Report damage with photos. Choose hold, return, or dispose — everything is saved so nothing disappears in manual notes.",
+      "cta": "Try in the app",
+      "imageAlt": "Damaged goods quality inspection"
+    },
+    "opname": {
+      "title": "Stocktake & adjustments",
+      "body": "Match physical counts with the system. Variances are saved with reasons — month-end closing is no longer guesswork.",
+      "cta": "Start a stocktake",
+      "imageAlt": "Stocktake review on dashboard"
+    },
+    "pricing": {
+      "title": "Plans that fit your store",
+      "body": "Start free for small shops, then move to Store or Business as your team and locations grow. Billed monthly, cancel anytime.",
+      "period": "/mo",
+      "plans": {
+        "free": {
+          "name": "Free",
+          "blurb": "For small shops starting clean stock control.",
+          "cta": "Start free",
+          "features": [
+            "1 user account",
+            "Up to 50 products",
+            "Receiving & sales",
+            "Damaged goods & QC photos",
+            "Basic dashboard",
+            "Community support"
+          ]
+        },
+        "shop": {
+          "name": "Store",
+          "blurb": "For daily operations with admins and staff.",
+          "cta": "Choose Store",
+          "features": [
+            "Up to 5 accounts (admin & staff)",
+            "Unlimited products",
+            "Full stocktakes",
+            "Reports + CSV export",
+            "QC photos with retention",
+            "Priority chat support"
+          ]
+        },
+        "business": {
+          "name": "Business",
+          "blurb": "For multi-location teams that need more control.",
+          "cta": "Choose Business",
+          "features": [
+            "Unlimited accounts & roles",
+            "Multi-location / multi-warehouse",
+            "Advanced aggregate reports",
+            "Owner read-only access",
+            "Full audit trail",
+            "Dedicated onboarding & support"
+          ]
+        }
+      }
+    },
+    "cta": {
+      "title": "Open stock from anywhere",
+      "body": "Use a browser in the store or office. Create an account, or try the admin, staff, and owner demos first.",
+      "button": "Try free"
+    },
+    "data": {
+      "title": "Reports you can use",
+      "body": "See opening–closing summaries by SKU, download CSV, and manage QC photo retention. Your inventory data stays in your hands.",
+      "cta": "View reports",
+      "imageAlt": "Hello Stock inventory workflow"
+    },
+    "sponsors": {
+      "title": "Used with field partners",
+      "label": "Hello Stock collaboration partners"
+    },
+    "apps": {
+      "title": "All inventory modules, one Hello Stock",
+      "body": "Products, receiving, sales, damaged goods, stocktakes, and reports — daily store flow without switching apps.",
+      "cta": "Explore modules",
+      "imageAlt": "Hello Stock inventory modules"
+    },
+    "testimonials": {
+      "title": "Used in the field",
+      "items": {
+        "prabowo": {
+          "role": "MBG Program · National Nutrition Agency",
+          "quote": "Ingredient receiving, outbound moves, and MBG distribution reports now sit in one flow. Field teams no longer reconcile numbers at the end of the day."
+        },
+        "gibran": {
+          "role": "Kopdes Merah Putih",
+          "quote": "Village co-op admins and staff work in the same system. Stocktakes are faster, and variances show up earlier."
+        },
+        "bahlil": {
+          "role": "Pertamina",
+          "quote": "Operational inventory is tracked per transaction. Summaries and reports are ready without waiting on manual recaps."
+        }
+      }
+    },
+    "footer": {
+      "brand": "Hello Stock helps stores record daily stock: tracked transactions, separated roles, and reports ready to read.",
+      "product": "Product",
+      "modules": "Modules",
+      "pricing": "Pricing",
+      "reports": "Reports",
+      "resources": "Resources",
+      "guide": "Guide",
+      "damage": "Damaged goods",
+      "status": "Status",
+      "company": "Company",
+      "demo": "Demo",
+      "contact": "Contact",
+      "security": "Security",
+      "tryTitle": "Try it today",
+      "tryBody": "Start free, or sign in with the admin, staff, or owner demo.",
+      "tryCta": "Get started",
+      "legal": "Terms & privacy",
+      "copyright": "© {{year}} Hello Stock"
+    }
+  },
+  "guide": {
+    "kicker": "Help",
+    "title": "Hello Stock guide",
+    "lead": "Practical steps for inventory modules: products, receiving, sales, damaged goods, stocktakes, and reports.",
+    "toc": "Contents",
+    "sections": {
+      "mulai": {
+        "title": "Quick start",
+        "steps": [
+          "Create an account, or sign in with a demo (admin, staff, or owner).",
+          "From the Dashboard, review stock summaries and recent activity.",
+          "Add products, then record daily receiving and sales."
+        ]
+      },
+      "peran": {
+        "title": "Roles in Hello Stock",
+        "steps": [
+          "Admin: manage users and all modules.",
+          "Staff: handle receiving, sales, damaged goods, and stocktakes.",
+          "Owner: monitor reports and stock condition (read-only)."
+        ]
+      },
+      "stok": {
+        "title": "Products & stock flow",
+        "steps": [
+          "Add products in Products (name, SKU, unit, opening stock).",
+          "Record inbound goods in Receiving.",
+          "Record outbound goods in Sales — stock updates automatically."
+        ]
+      },
+      "qc": {
+        "title": "Damaged goods & stocktakes",
+        "steps": [
+          "Report damaged goods and upload QC photos when needed.",
+          "Set disposition on the detail page.",
+          "Run a stocktake during physical counts so data matches the warehouse."
+        ]
+      },
+      "laporan": {
+        "title": "Reports",
+        "steps": [
+          "Open Reports for SKU summaries.",
+          "Open an SKU detail page to see stock movement.",
+          "Download CSV when you need to take data outside the app."
+        ]
+      }
+    },
+    "loginCta": "Sign in to the app",
+    "registerCta": "Create a free account"
+  },
+  "status": {
+    "title": "Status",
+    "summary": "All systems operational · updated {{time}}",
+    "ok": "Operational",
+    "services": {
+      "web": "Web app",
+      "api": "API & authentication",
+      "inventory": "Inventory",
+      "qc": "Damaged goods & QC",
+      "reports": "Reports"
+    }
+  },
+  "contact": {
+    "kicker": "Company",
+    "title": "Contact",
+    "lead": "Questions about plans, demos, or how to use Hello Stock? Send a short message — we read every one.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send message",
+    "note": "Or try a demo account on the sign-in page.",
+    "sent": "Message saved. This is a local demo, so no real email is sent yet.",
+    "loginCta": "Sign in to the app",
+    "guideCta": "Read the guide"
+  },
+  "legal": {
+    "kicker": "Legal",
+    "title": "Terms & privacy",
+    "lead": "A short summary of how Hello Stock uses account and store inventory data for this demo product.",
+    "termsTitle": "Terms of use",
+    "terms": [
+      "You are responsible for the account and data entered into the system.",
+      "Demo accounts are for feature trials only, not sensitive production data.",
+      "Features and plans may change as the product develops."
+    ],
+    "privacyTitle": "Privacy",
+    "privacy": [
+      "Login and inventory data are used to run the app (sessions, stock, reports).",
+      "QC photos are stored according to retention settings in the system.",
+      "We do not sell your store data to third parties for advertising."
+    ],
+    "contactTitle": "Contact",
+    "contactBody": "For questions about data or accounts, open the Contact page.",
+    "securityCta": "View security",
+    "homeCta": "Back to home"
+  },
+  "security": {
+    "kicker": "Security",
+    "title": "Hello Stock security",
+    "lead": "Access is limited by role, transactions leave a trail, and inventory data stays under your store’s control.",
+    "accessTitle": "Access control",
+    "access": [
+      "Admins manage users and all modules.",
+      "Staff handle daily operations within their permissions.",
+      "Owners read summaries and reports without changing operational data."
+    ],
+    "trailTitle": "Operational trail",
+    "trail": [
+      "Receiving and sales include transaction codes.",
+      "Stocktake adjustments and damage dispositions are saved with reasons.",
+      "Reports can be exported to CSV for internal audits."
+    ],
+    "statusTitle": "Service status",
+    "statusBody": "Monitor system availability on the Status page.",
+    "statusCta": "Check status",
+    "legalCta": "Terms & privacy"
+  }
+}

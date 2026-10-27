@@ -1,11 +1,36 @@
 {
+  "users": [
+    { "name": "Admin Toko", "email": "admin@hellostock.test", "password": "admin", "role": "admin", "active": true, "demo": true, "createdAt": "2026-10-04T09:00:00+08:00" },
+    { "name": "Pemilik", "email": "pemilik@hellostock.test", "password": "pemilik", "role": "pemilik", "active": true, "demo": true, "createdAt": "2026-10-04T09:00:00+08:00" },
+    { "name": "Petugas Contoh", "email": "petugas@hellostock.test", "password": "petugas", "role": "petugas", "active": true, "demo": true, "createdAt": "2026-10-04T09:00:00+08:00" }
+  ],
+  "performance": {
+    "range": "Jan–Jun 2026",
+    "months": [
+      { "label": "Jan", "value": 78 },
+      { "label": "Feb", "value": 34 },
+      { "label": "Mar", "value": 67, "peak": true },
+      { "label": "Apr", "value": 28 },
+      { "label": "Mei", "value": 39 },
+      { "label": "Jun", "value": 80 }
+    ]
+  },
+  "movements": [
+    { "id": "mv-6c2b1300", "type": "penerimaan", "code": "IN-20261027-002", "name": "Kaos Hello Stock", "sku": "HL-001", "quantity": 2, "unit": "pcs", "condition": "Baik", "photoName": null, "at": "2026-10-27T13:38:00+08:00" },
+    { "id": "mv-1", "type": "rusak", "code": "DAM-20261027-001", "name": "Kaos Hello Stock", "sku": "HL-001", "quantity": -1, "count": 1, "unit": "pcs", "disposition": "Musnah", "note": "Kain sobek di bagian lengan.", "photoName": "qc-kaos-rusak-01.jpg", "at": "2026-10-27T11:00:00+08:00" },
+    { "id": "mv-5", "type": "rusak", "code": "DAM-20261027-002", "name": "Buku Catatan A5", "sku": "HL-103", "quantity": 0, "count": 1, "unit": "pcs", "disposition": "Tahan", "note": "Sampul lecet. Barang dipisahkan untuk diperiksa.", "photoName": "qc-buku-tahan-01.jpg", "at": "2026-10-27T12:00:00+08:00" },
+    { "id": "mv-2", "type": "penjualan", "code": "OUT-20261027-001", "name": "Tote Bag Kanvas", "sku": "HL-014", "quantity": -2, "unit": "pcs", "condition": "Baik", "at": "2026-10-27T10:00:00+08:00" },
+    { "id": "mv-3", "type": "penerimaan", "code": "IN-20261027-001", "name": "Mug Keramik 350ml", "sku": "HL-027", "quantity": 6, "unit": "pcs", "condition": "Baik", "at": "2026-10-27T09:00:00+08:00" },
+    { "id": "mv-4", "type": "opname", "code": "ADJ-20261027-001", "name": "Buku Catatan A5", "sku": "HL-103", "quantity": -1, "before": 12, "after": 11, "unit": "pcs", "reason": "Selisih hasil hitung fisik ulang di Rak-D1.", "at": "2026-10-27T08:30:00+08:00" }
+  ],
   "stocks": [
     {
       "id": "stk-kaos",
       "sku": "HL-001",
       "name": "Kaos Hello Stock",
       "category": "Apparel",
-      "quantity": 42,
+      "location": "Rak-B2",
+      "quantity": 44,
       "price": 89000,
       "unit": "pcs"
     },
@@ -14,6 +39,7 @@
       "sku": "HL-014",
       "name": "Tote Bag Kanvas",
       "category": "Aksesoris",
+      "location": "Rak-B1",
       "quantity": 18,
       "price": 65000,
       "unit": "pcs"
@@ -23,6 +49,7 @@
       "sku": "HL-027",
       "name": "Mug Keramik 350ml",
       "category": "Rumah",
+      "location": "Rak-C3",
       "quantity": 7,
       "price": 48000,
       "unit": "pcs"
@@ -32,6 +59,7 @@
       "sku": "HL-103",
       "name": "Buku Catatan A5",
       "category": "Alat tulis",
+      "location": "Rak-D1",
       "quantity": 120,
       "price": 25000,
       "unit": "pcs"
@@ -41,6 +69,7 @@
       "sku": "HL-208",
       "name": "Topi Drill",
       "category": "Apparel",
+      "location": "Rak-B4",
       "quantity": 15,
       "price": 75000,
       "unit": "pcs"

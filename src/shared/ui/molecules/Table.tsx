@@ -1,4 +1,5 @@
 import type { ReactNode, TdHTMLAttributes, ThHTMLAttributes } from 'react'
+import { Text } from '../atoms/Text.tsx'
 
 type TableProps = {
   caption: string
@@ -32,8 +33,12 @@ export function TableBody({ children }: { children: ReactNode }) {
   return <tbody>{children}</tbody>
 }
 
-export function TableRow({ children }: { children: ReactNode }) {
-  return <tr className="hs-table-row">{children}</tr>
+export function TableRow({ children, selected = false, onClick }: { children: ReactNode; selected?: boolean; onClick?: () => void }) {
+  return (
+    <tr className={selected ? 'hs-table-row is-selected' : 'hs-table-row'} onClick={onClick}>
+      {children}
+    </tr>
+  )
 }
 
 export function TableCell({ className = '', ...props }: TdHTMLAttributes<HTMLTableCellElement>) {
@@ -51,8 +56,10 @@ export function TableFooter({ start, end, colSpan }: TableFooterProps) {
     <tfoot>
       <tr>
         <td className="hs-table-foot" colSpan={colSpan}>
-          <span>{start}</span>
-          {end ? <span>{end}</span> : null}
+          <div className="hs-table-foot-row">
+            <Text as="span">{start}</Text>
+            {end ? <Text as="span">{end}</Text> : null}
+          </div>
         </td>
       </tr>
     </tfoot>

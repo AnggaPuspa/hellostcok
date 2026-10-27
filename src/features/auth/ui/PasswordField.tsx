@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Button } from '@/shared/ui/atoms/Button.tsx'
 import { TextField } from '@/shared/ui/atoms/TextField.tsx'
 
 type PasswordFieldProps = {
@@ -23,9 +24,9 @@ export function PasswordField({ label, name, value, autoComplete, onChange }: Pa
       onChange={(event) => onChange(event.target.value)}
       required
       trailing={
-        <button type="button" className="auth-reveal" onClick={() => setVisible((current) => !current)}>
+        <Button type="button" className="auth-reveal" onClick={() => setVisible((current) => !current)}>
           {visible ? 'Sembunyikan' : 'Tampilkan'}
-        </button>
+        </Button>
       }
     />
   )

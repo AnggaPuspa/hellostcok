@@ -3,6 +3,7 @@ import { ApiError } from '@/shared/api/client.ts'
 import { getHealth } from '@/shared/api/health.ts'
 import { formatNumber, formatRupiah } from '@/shared/lib/format.ts'
 import { Button } from '@/shared/ui/atoms/Button.tsx'
+import { Text } from '@/shared/ui/atoms/Text.tsx'
 import { Card } from '@/shared/ui/molecules/Card.tsx'
 import { createStock, deleteStock, getStocks, resetStocks } from '../api/stock.api.ts'
 import type { StockInput, StockItem } from '../model/stock.types.ts'
@@ -102,9 +103,9 @@ export function StockPage() {
   return (
     <div className="page">
       <section className="status-row" aria-live="polite">
-        <span className={serverOk ? 'pill pill-ok' : 'pill pill-off'}>
+        <Text as="span" className={serverOk ? 'pill pill-ok' : 'pill pill-off'}>
           {serverOk ? 'Fake server terhubung' : 'Fake server tidak terhubung'}
-        </span>
+        </Text>
         <div className="status-actions">
           <Button variant="secondary" onClick={() => void load()} disabled={loading}>
             Muat ulang
@@ -115,28 +116,28 @@ export function StockPage() {
         </div>
       </section>
 
-      {error ? <p className="banner" role="alert">{error}</p> : null}
+      {error ? <Text className="banner">{error}</Text> : null}
 
       <section className="stats">
         <article>
-          <p>Jenis barang</p>
-          <strong>{formatNumber(stocks.length)}</strong>
+          <Text>Jenis barang</Text>
+          <Text className="dash-figure">{formatNumber(stocks.length)}</Text>
         </article>
         <article>
-          <p>Total jumlah</p>
-          <strong>{formatNumber(totalQty)}</strong>
+          <Text>Total jumlah</Text>
+          <Text className="dash-figure">{formatNumber(totalQty)}</Text>
         </article>
         <article>
-          <p>Nilai stok</p>
-          <strong>{formatRupiah(totalValue)}</strong>
+          <Text>Nilai stok</Text>
+          <Text className="dash-figure">{formatRupiah(totalValue)}</Text>
         </article>
       </section>
 
       <div className="layout">
         <StockForm disabled={!serverOk || loading} onCreate={handleCreate} />
         <Card title="Daftar stok">
-          <p className="card-lead">GET /api/stocks</p>
-          {loading ? <p className="empty">Mengambil data dari fake server...</p> : <StockTable stocks={stocks} busyId={busyId} onDelete={(id) => void handleDelete(id)} />}
+          <Text className="card-lead">GET /api/stocks</Text>
+          {loading ? <Text className="empty">Mengambil data dari fake server...</Text> : <StockTable stocks={stocks} busyId={busyId} onDelete={(id) => void handleDelete(id)} />}
         </Card>
       </div>
     </div>

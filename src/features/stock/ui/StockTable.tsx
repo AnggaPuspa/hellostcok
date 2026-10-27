@@ -1,4 +1,5 @@
 import { Button } from '@/shared/ui/atoms/Button.tsx'
+import { Text } from '@/shared/ui/atoms/Text.tsx'
 import { Table, TableBody, TableCell, TableFooter, TableHeader, TableHeaderCell, TableRow } from '@/shared/ui/molecules/Table.tsx'
 import { formatNumber, formatRupiah } from '@/shared/lib/format.ts'
 import type { StockItem } from '../model/stock.types.ts'
@@ -11,7 +12,7 @@ type StockTableProps = {
 
 export function StockTable({ stocks, busyId, onDelete }: StockTableProps) {
   if (stocks.length === 0) {
-    return <p className="empty">Belum ada barang. Tambah dari formulir, atau reset data awal.</p>
+    return <Text className="empty">Belum ada barang. Tambah dari formulir, atau reset data awal.</Text>
   }
 
   return (

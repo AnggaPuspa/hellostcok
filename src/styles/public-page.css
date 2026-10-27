@@ -1,0 +1,245 @@
+.hs-public {
+  --hs-navy: #043873;
+  --hs-blue: #4f9cf9;
+  --hs-ink: #212529;
+  --hs-muted: #5c6b7a;
+  --hs-line: #d7e0ea;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: var(--hs-ink);
+  font-family: Inter, Manrope, 'Segoe UI', sans-serif;
+}
+
+.hs-public-shell {
+  width: min(680px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.hs-public-header {
+  border-bottom: 1px solid var(--hs-line);
+}
+
+.hs-public-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 64px;
+}
+
+.hs-public-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--hs-navy);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hs-public-logo img {
+  display: block;
+}
+
+.hs-public-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 20px;
+  justify-content: flex-end;
+}
+
+.hs-public-nav a {
+  color: var(--hs-ink);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.hs-public-main {
+  flex: 1;
+  padding: 56px 0 72px;
+}
+
+.hs-public-kicker {
+  margin: 0 0 8px;
+  color: var(--hs-blue);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hs-public-main h1 {
+  margin: 0 0 12px;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--hs-navy);
+}
+
+.hs-public-lead {
+  margin: 0 0 32px;
+  color: var(--hs-muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.hs-public-main h2 {
+  margin: 32px 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--hs-navy);
+}
+
+.hs-public-main p,
+.hs-public-main li {
+  color: var(--hs-ink);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.hs-public-main p {
+  margin: 0 0 14px;
+}
+
+.hs-public-main ul {
+  margin: 0 0 16px;
+  padding: 0 0 0 1.2em;
+}
+
+.hs-public-main li {
+  margin-bottom: 8px;
+}
+
+.hs-public-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--hs-line);
+}
+
+.hs-public-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 8px;
+  background: var(--hs-blue);
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.hs-public-link {
+  color: var(--hs-navy);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.hs-public-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.hs-public-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hs-public-field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--hs-navy);
+}
+
+.hs-public-field input,
+.hs-public-field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--hs-line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--hs-ink);
+  font: inherit;
+  font-size: 15px;
+}
+
+.hs-public-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.hs-public-field input:focus,
+.hs-public-field textarea:focus {
+  outline: 2px solid rgba(79, 156, 249, 0.35);
+  border-color: var(--hs-blue);
+}
+
+.hs-public-submit {
+  align-self: flex-start;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--hs-blue);
+  color: #fff;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hs-public-note {
+  margin: 12px 0 0;
+  color: var(--hs-muted);
+  font-size: 14px;
+}
+
+.hs-public-footer {
+  border-top: 1px solid var(--hs-line);
+  padding: 20px 0;
+}
+
+.hs-public-footer .hs-public-shell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.hs-public-footer p {
+  margin: 0;
+  color: var(--hs-muted);
+  font-size: 14px;
+}
+
+.hs-public-footer a {
+  color: var(--hs-blue);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media (max-width: 560px) {
+  .hs-public-main {
+    padding: 40px 0 56px;
+  }
+
+  .hs-public-main h1 {
+    font-size: 28px;
+  }
+
+  .hs-public-nav {
+    gap: 14px;
+  }
+}
