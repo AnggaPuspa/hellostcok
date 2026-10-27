@@ -1,0 +1,49 @@
+{
+  "stocks": [
+    {
+      "id": "stk-kaos",
+      "sku": "HL-001",
+      "name": "Kaos Hello Stock",
+      "category": "Apparel",
+      "quantity": 42,
+      "price": 89000,
+      "unit": "pcs"
+    },
+    {
+      "id": "stk-tote",
+      "sku": "HL-014",
+      "name": "Tote Bag Kanvas",
+      "category": "Aksesoris",
+      "quantity": 18,
+      "price": 65000,
+      "unit": "pcs"
+    },
+    {
+      "id": "stk-mug",
+      "sku": "HL-027",
+      "name": "Mug Keramik 350ml",
+      "category": "Rumah",
+      "quantity": 7,
+      "price": 48000,
+      "unit": "pcs"
+    },
+    {
+      "id": "stk-note",
+      "sku": "HL-103",
+      "name": "Buku Catatan A5",
+      "category": "Alat tulis",
+      "quantity": 120,
+      "price": 25000,
+      "unit": "pcs"
+    },
+    {
+      "id": "stk-cap",
+      "sku": "HL-208",
+      "name": "Topi Drill",
+      "category": "Apparel",
+      "quantity": 15,
+      "price": 75000,
+      "unit": "pcs"
+    }
+  ]
+}
