@@ -1,4 +1,7 @@
 import type { ReactNode } from 'react'
+import { useNavigate } from 'react-router'
+import { logout } from '@/features/auth/model/session.ts'
+import { Button } from '../atoms/Button.tsx'
 import { Heading } from '../atoms/Heading.tsx'
 
 type AppShellProps = {
@@ -6,6 +9,13 @@ type AppShellProps = {
 }
 
 export function AppShell({ children }: AppShellProps) {
+  const navigate = useNavigate()
+
+  function handleLogout() {
+    logout()
+    navigate('/login')
+  }
+
   return (
     <div className="shell">
       <header className="topbar">
@@ -13,7 +23,7 @@ export function AppShell({ children }: AppShellProps) {
           <p className="eyebrow">Fake server · /api</p>
           <Heading>Hello Stock</Heading>
         </div>
-        <p className="topbar-note">Data barang hidup di server palsu, bukan di komponen.</p>
+        <Button variant="secondary" onClick={handleLogout}>Keluar</Button>
       </header>
       <main>{children}</main>
     </div>
