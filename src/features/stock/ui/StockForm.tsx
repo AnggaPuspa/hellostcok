@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react'
 import { ApiError } from '@/shared/api/client.ts'
 import { Button } from '@/shared/ui/atoms/Button.tsx'
 import { TextField } from '@/shared/ui/atoms/TextField.tsx'
+import { Card } from '@/shared/ui/molecules/Card.tsx'
 import type { StockInput } from '../model/stock.types.ts'
 
 type StockFormProps = {
@@ -50,8 +51,8 @@ export function StockForm({ disabled = false, onCreate }: StockFormProps) {
   }
 
   return (
-    <form className="card" onSubmit={handleSubmit}>
-      <h2>Barang baru</h2>
+    <Card title="Barang baru">
+    <form className="hs-form" onSubmit={handleSubmit}>
       <p className="card-lead">Terkirim ke POST /api/stocks di fake server.</p>
       <TextField label="SKU" name="sku" value={form.sku} onChange={(event) => update('sku', event.target.value)} required />
       <TextField label="Nama barang" name="name" value={form.name} onChange={(event) => update('name', event.target.value)} required />
@@ -62,9 +63,10 @@ export function StockForm({ disabled = false, onCreate }: StockFormProps) {
       </div>
       <TextField label="Satuan" name="unit" value={form.unit} onChange={(event) => update('unit', event.target.value)} />
       {error ? <p className="form-error" role="alert">{error}</p> : null}
-      <Button type="submit" disabled={disabled || pending}>
+      <Button type="submit" block disabled={disabled || pending}>
         {pending ? 'Menyimpan...' : 'Simpan ke server'}
       </Button>
     </form>
+    </Card>
   )
 }

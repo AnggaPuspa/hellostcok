@@ -3,6 +3,7 @@ import { ApiError } from '@/shared/api/client.ts'
 import { getHealth } from '@/shared/api/health.ts'
 import { formatNumber, formatRupiah } from '@/shared/lib/format.ts'
 import { Button } from '@/shared/ui/atoms/Button.tsx'
+import { Card } from '@/shared/ui/molecules/Card.tsx'
 import { createStock, deleteStock, getStocks, resetStocks } from '../api/stock.api.ts'
 import type { StockInput, StockItem } from '../model/stock.types.ts'
 import { StockForm } from './StockForm.tsx'
@@ -105,10 +106,10 @@ export function StockPage() {
           {serverOk ? 'Fake server terhubung' : 'Fake server tidak terhubung'}
         </span>
         <div className="status-actions">
-          <Button variant="ghost" onClick={() => void load()} disabled={loading}>
+          <Button variant="secondary" onClick={() => void load()} disabled={loading}>
             Muat ulang
           </Button>
-          <Button variant="ghost" onClick={() => void handleReset()} disabled={loading || !serverOk}>
+          <Button variant="secondary" onClick={() => void handleReset()} disabled={loading || !serverOk}>
             Reset data awal
           </Button>
         </div>
@@ -133,15 +134,10 @@ export function StockPage() {
 
       <div className="layout">
         <StockForm disabled={!serverOk || loading} onCreate={handleCreate} />
-        <section className="card table-card">
-          <div className="card-head">
-            <div>
-              <h2>Daftar stok</h2>
-              <p className="card-lead">GET /api/stocks</p>
-            </div>
-          </div>
+        <Card title="Daftar stok">
+          <p className="card-lead">GET /api/stocks</p>
           {loading ? <p className="empty">Mengambil data dari fake server...</p> : <StockTable stocks={stocks} busyId={busyId} onDelete={(id) => void handleDelete(id)} />}
-        </section>
+        </Card>
       </div>
     </div>
   )
